@@ -1,0 +1,2 @@
+# Redirect index.html to root for canonical consistency
+/index.html / 301

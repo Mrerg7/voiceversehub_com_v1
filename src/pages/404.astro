@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { CONTACT_EMAIL } from '../utils/constants';
+---
+
+<BaseLayout
+  title="Page Not Found"
+  description="The page you're looking for doesn't exist. Explore voiceversehub.com — a premium domain at the center of the AI voice & verse revolution."
+  noindex={true}
+>
+  <section class="max-w-screen-xl mx-auto px-8 py-24 text-center">
+    <h1 class="text-8xl font-extrabold text-indigo-500 mb-6">404</h1>
+    <p class="text-xl text-slate-400 mb-4 max-w-xl mx-auto">
+      This page doesn't exist. But the opportunity does.
+    </p>
+    <p class="text-slate-500 mb-10 max-w-md mx-auto">
+      voiceversehub.com is a premium domain available for acquisition — the definitive brand for the AI voice & verse revolution.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="/" class="px-8 py-3 rounded-2xl bg-white text-slate-900 hover:bg-slate-100 transition-all font-semibold">
+        Go Home
+      </a>
+      <a href={`mailto:${CONTACT_EMAIL}?subject=Inquiry%20for%20voiceversehub.com`}
+         class="px-8 py-3 rounded-2xl border border-slate-700 hover:bg-slate-900 transition-all font-medium">
+        Inquire About This Domain
+      </a>
+    </div>
+  </section>
+</BaseLayout>

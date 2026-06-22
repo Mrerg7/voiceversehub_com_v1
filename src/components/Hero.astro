@@ -1,0 +1,69 @@
+---
+import { CONTACT_EMAIL, HERO_IMAGE_ID } from '../utils/constants';
+import { getCFImageUrl } from '../utils/cf-images';
+---
+
+<!-- Hero Section -->
+<section class="pt-20 pb-16 md:pt-24 md:pb-20 border-b border-slate-800 bg-slate-950 relative overflow-hidden">
+  <!-- Background image -->
+  <div class="absolute inset-0 opacity-15">
+    <img
+      src={getCFImageUrl(HERO_IMAGE_ID, { width: 1920, fit: 'cover' })}
+      alt="VoiceVerse Hub — AI Voice & Verse Revolution"
+      class="w-full h-full object-cover"
+      loading="eager"
+    />
+  </div>
+
+  <div class="max-w-screen-xl mx-auto px-8 relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Premium Badge -->
+      <div class="inline-flex items-center gap-x-2 mb-6 px-4 py-1.5 rounded-3xl bg-slate-900 border border-slate-700">
+        <div class="flex items-center gap-x-2 text-xs font-medium tracking-[1.5px] text-indigo-400">
+          <i class="fa-solid fa-globe"></i>
+          <span>PREMIUM .COM DOMAIN</span>
+        </div>
+      </div>
+
+      <h1 class="text-7xl md:text-8xl font-bold tracking-tighter mb-2">
+        <span class="domain-display">voiceversehub.com</span>
+      </h1>
+
+      <p class="mt-4 text-2xl md:text-3xl font-semibold tracking-tight text-slate-300">
+        The definitive brand for the<br class="hidden md:block"> AI voice &amp; verse revolution.
+      </p>
+
+      <p class="mt-6 max-w-2xl mx-auto text-lg text-slate-400 copy-text">
+        In the new era of generative audio, one intermedia artist can create what once required an entire production team.
+        Own the central hub of this transformation.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href={`mailto:${CONTACT_EMAIL}?subject=Inquiry%20for%20voiceversehub.com`}
+           class="group w-full sm:w-auto inline-flex items-center justify-center gap-x-3 px-9 py-4 rounded-3xl bg-white text-slate-900 hover:bg-slate-100 active:bg-slate-200 transition-all font-semibold text-base shadow-xl shadow-indigo-500/30">
+          <span>Secure This Asset</span>
+          <i class="fa-solid fa-lock group-active:scale-95 transition-transform"></i>
+        </a>
+        <a href="#market"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-x-3 px-8 py-4 rounded-3xl border border-slate-700 hover:bg-slate-900 transition-all font-medium text-base">
+          <span>Explore the Opportunity</span>
+        </a>
+      </div>
+
+      <div class="mt-8 flex items-center justify-center gap-x-8 text-xs text-slate-500">
+        <div class="flex items-center gap-x-2">
+          <i class="fa-solid fa-check text-emerald-500"></i>
+          <span>Exact-match .com</span>
+        </div>
+        <div class="flex items-center gap-x-2">
+          <i class="fa-solid fa-check text-emerald-500"></i>
+          <span>Instant brand authority</span>
+        </div>
+        <div class="flex items-center gap-x-2">
+          <i class="fa-solid fa-check text-emerald-500"></i>
+          <span>Category-defining</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

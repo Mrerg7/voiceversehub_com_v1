@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ParadigmShift from '../components/ParadigmShift.astro';
+import VoiceVerseConcept from '../components/VoiceVerseConcept.astro';
+import MarketOpportunity from '../components/MarketOpportunity.astro';
+import WhyDomain from '../components/WhyDomain.astro';
+import UseCases from '../components/UseCases.astro';
+import InvestmentCTA from '../components/InvestmentCTA.astro';
+import { SITE_DESCRIPTION } from '../utils/constants';
+---
+
+<BaseLayout
+  title="voiceversehub.com"
+  description={SITE_DESCRIPTION}
+>
+  <Hero />
+  <ParadigmShift />
+  <VoiceVerseConcept />
+  <MarketOpportunity />
+  <WhyDomain />
+  <UseCases />
+  <InvestmentCTA />
+</BaseLayout>
