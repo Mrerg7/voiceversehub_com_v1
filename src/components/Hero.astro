@@ -1,39 +1,47 @@
 ---
 import { CONTACT_EMAIL, HERO_IMAGE_ID } from '../utils/constants';
-import { getCFImageUrl } from '../utils/cf-images';
+import { getCFImageUrl, getCFImageSrcSet } from '../utils/cf-images';
 ---
 
 <!-- Hero Section -->
-<section class="pt-20 pb-16 md:pt-24 md:pb-20 border-b border-slate-800 bg-slate-950 relative overflow-hidden">
-  <!-- Background image -->
-  <div class="absolute inset-0 opacity-15">
+<section class="relative overflow-hidden border-b border-slate-800 min-h-[min(100svh,880px)] flex items-center">
+  <!-- Full-bleed hero image -->
+  <div class="absolute inset-0">
     <img
       src={getCFImageUrl(HERO_IMAGE_ID, { width: 1920, fit: 'cover' })}
+      srcset={getCFImageSrcSet(HERO_IMAGE_ID, [768, 1280, 1920])}
+      sizes="100vw"
       alt="VoiceVerse Hub — AI Voice & Verse Revolution"
       class="w-full h-full object-cover"
       loading="eager"
+      fetchpriority="high"
     />
+    <!-- Gradient scrim for text contrast — keeps image visible, not washed out -->
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/55 to-slate-950"
+      aria-hidden="true"
+    ></div>
   </div>
 
-  <div class="max-w-screen-xl mx-auto px-8 relative z-10">
+  <div class="max-w-screen-xl mx-auto px-5 sm:px-8 relative z-10 w-full pt-24 pb-16 md:pt-28 md:pb-20">
     <div class="max-w-4xl mx-auto text-center">
       <!-- Premium Badge -->
-      <div class="inline-flex items-center gap-x-2 mb-6 px-4 py-1.5 rounded-3xl bg-slate-900 border border-slate-700">
+      <div class="inline-flex items-center gap-x-2 mb-6 px-4 py-1.5 rounded-3xl bg-slate-900/80 border border-slate-700 backdrop-blur-sm">
         <div class="flex items-center gap-x-2 text-xs font-medium tracking-[1.5px] text-indigo-400">
           <i class="fa-solid fa-globe"></i>
           <span>PREMIUM .COM DOMAIN</span>
         </div>
       </div>
 
-      <h1 class="text-7xl md:text-8xl font-bold tracking-tighter mb-2">
+      <h1 class="font-bold tracking-tighter mb-2">
         <span class="domain-display">voiceversehub.com</span>
       </h1>
 
-      <p class="mt-4 text-2xl md:text-3xl font-semibold tracking-tight text-slate-300">
+      <p class="mt-4 text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight text-slate-200">
         The definitive brand for the<br class="hidden md:block"> AI voice &amp; verse revolution.
       </p>
 
-      <p class="mt-6 max-w-2xl mx-auto text-lg text-slate-400 copy-text">
+      <p class="mt-6 max-w-2xl mx-auto text-base sm:text-lg text-slate-300 copy-text">
         In the new era of generative audio, one intermedia artist can create what once required an entire production team.
         Own the central hub of this transformation.
       </p>
@@ -45,12 +53,12 @@ import { getCFImageUrl } from '../utils/cf-images';
           <i class="fa-solid fa-lock group-active:scale-95 transition-transform"></i>
         </a>
         <a href="#market"
-           class="w-full sm:w-auto inline-flex items-center justify-center gap-x-3 px-8 py-4 rounded-3xl border border-slate-700 hover:bg-slate-900 transition-all font-medium text-base">
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-x-3 px-8 py-4 rounded-3xl border border-slate-600 bg-slate-950/40 hover:bg-slate-900/80 transition-all font-medium text-base backdrop-blur-sm">
           <span>Explore the Opportunity</span>
         </a>
       </div>
 
-      <div class="mt-8 flex items-center justify-center gap-x-8 text-xs text-slate-500">
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-slate-400">
         <div class="flex items-center gap-x-2">
           <i class="fa-solid fa-check text-emerald-500"></i>
           <span>Exact-match .com</span>

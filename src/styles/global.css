@@ -27,17 +27,21 @@
   }
 
   .domain-display {
-    font-size: 3.5rem;
+    display: inline-block;
+    font-size: clamp(2.25rem, 8.5vw, 5.5rem);
     line-height: 1;
     font-weight: 700;
     letter-spacing: -0.04em;
     background: linear-gradient(90deg, #fff, #e0e7ff);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 
   .section-header {
-    font-size: 2.25rem;
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
     line-height: 1.1;
     font-weight: 700;
     letter-spacing: -0.03em;

@@ -3,7 +3,7 @@ import { NAV_ITEMS, SITE_NAME, CONTACT_EMAIL } from '../utils/constants';
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-slate-950/90 backdrop-blur-lg border-b border-slate-800">
-  <div class="max-w-screen-xl mx-auto px-8 py-5 flex items-center justify-between">
+  <div class="max-w-screen-xl mx-auto px-5 sm:px-8 py-4 sm:py-5 flex items-center justify-between gap-3">
     <!-- Logo -->
     <div class="flex items-center gap-x-3">
       <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center">
@@ -28,7 +28,7 @@ import { NAV_ITEMS, SITE_NAME, CONTACT_EMAIL } from '../utils/constants';
         </div>
       </div>
       <a href={`mailto:${CONTACT_EMAIL}?subject=Inquiry%20for%20voiceversehub.com`}
-         class="px-6 py-2.5 rounded-2xl bg-white text-slate-900 hover:bg-slate-100 transition-all font-semibold text-sm flex items-center gap-x-2 shadow-lg shadow-indigo-500/20">
+         class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-2xl bg-white text-slate-900 hover:bg-slate-100 transition-all font-semibold text-sm flex items-center gap-x-2 shadow-lg shadow-indigo-500/20 shrink-0">
         <span>Inquire Now</span>
         <i class="fa-solid fa-arrow-right text-xs"></i>
       </a>
