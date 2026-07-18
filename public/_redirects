@@ -1,2 +1,10 @@
-# Redirect index.html to root for canonical consistency
+# Canonical URL redirects: www → non-www
+https://www.voiceversehub.com/* https://voiceversehub.com/:splat 301
+
+# Index file variants → root
 /index.html / 301
+/index.htm / 301
+
+# Trailing slash enforcement for pages without file extensions
+# (Cloudflare Pages _redirects doesn't support conditional logic, so the
+# Worker handles the general trailing-slash enforcement — see src/worker.ts)
