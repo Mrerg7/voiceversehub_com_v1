@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-12 — deploy retry
+
+Cloudflare Workers Builds compiled the new site and uploaded the assets, then `PATCH .../script-settings` returned a 504. That step never activated the version, so the live site stayed on the previous page. Wrangler is now 4.149 (was 3.114). The deploy command is unchanged: `npx wrangler deploy`.
+
 ## 2026-10-12
 
 Optimization pass for the voiceversehub.com acquisition page. Still a static Astro site on the Cloudflare Workers and Pages free plan. No paid runtime, no new worker services.
