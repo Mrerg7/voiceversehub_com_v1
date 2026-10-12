@@ -1,24 +1,402 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
-import ParadigmShift from '../components/ParadigmShift.astro';
-import VoiceVerseConcept from '../components/VoiceVerseConcept.astro';
-import MarketOpportunity from '../components/MarketOpportunity.astro';
-import WhyDomain from '../components/WhyDomain.astro';
-import UseCases from '../components/UseCases.astro';
-import InvestmentCTA from '../components/InvestmentCTA.astro';
-import { SITE_DESCRIPTION } from '../utils/constants';
+import BaseLayout from "../layouts/BaseLayout.astro";
+const email = "sales@desertrich.com";
+const mailto = `mailto:${email}?subject=${encodeURIComponent("Inquiry for voiceversehub.com")}`;
 ---
 
-<BaseLayout
-  title="voiceversehub.com"
-  description={SITE_DESCRIPTION}
->
-  <Hero />
-  <ParadigmShift />
-  <VoiceVerseConcept />
-  <MarketOpportunity />
-  <WhyDomain />
-  <UseCases />
-  <InvestmentCTA />
+<BaseLayout>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+          <rect x="1" y="1" width="26" height="26" rx="8" fill="none" stroke="#c9854a" stroke-width="1.5"></rect>
+          <path d="M7 16c1.2-4 2.2-4 3.2 0s2 4 3.2 0 2-4 3.2 0 2 4 3.2 0" fill="none" stroke="#c9854a" stroke-width="1.5" stroke-linecap="round"></path>
+        </svg>
+        <span>VoiceVerse</span>
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="#name">The name</a>
+        <a href="#market">Market</a>
+        <a href="#uses">Uses</a>
+        <a href="#case">The case</a>
+        <a href="#notes">Notes</a>
+        <a href="#inquire">Inquire</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="theme" type="button" aria-label="Switch color theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+        </button>
+        <a class="btn btn-primary offer-desktop" href="#inquire">Make an offer</a>
+        <button class="icon-btn menu-btn" id="menu" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <nav id="mobile-nav" class="mobile-nav wrap" aria-label="Mobile" hidden>
+    <a href="#name">The name</a>
+    <a href="#market">Market</a>
+    <a href="#uses">Uses</a>
+    <a href="#case">The case</a>
+    <a href="#notes">Notes</a>
+    <a href="#inquire">Inquire</a>
+  </nav>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-field" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">Premium .com · Available</p>
+          <h1 class="domain">voiceversehub.com</h1>
+          <p class="lede">The definitive brand for the AI voice and verse revolution.</p>
+          <p class="sub">In the new era of generative audio, one artist can make what once took a production team. Own the central hub of that shift.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#inquire" data-intent="Make an offer">Make an offer</a>
+            <a class="btn" href="#inquire" data-intent="Request buy terms">Request terms</a>
+            <a class="btn btn-ghost" href={mailto}>Email the agent</a>
+          </div>
+          <ul class="chips">
+            <li>Exact-match .com</li>
+            <li>Instant brand authority</li>
+            <li>Category-defining</li>
+          </ul>
+        </div>
+        <article class="plate">
+          <div class="plate-top">
+            <p class="kicker">Acquisition plate</p>
+            <span class="badge">Available</span>
+          </div>
+          <h2>voiceversehub.com</h2>
+          <dl class="specs">
+            <div><dt>Length</dt><dd>14 characters</dd></div>
+            <div><dt>Extension</dt><dd>.com</dd></div>
+            <div><dt>Type</dt><dd>Exact-match, brandable</dd></div>
+            <div><dt>Price</dt><dd>On request</dd></div>
+            <div><dt>Transfer</dt><dd>Escrow.com or equivalent</dd></div>
+            <div><dt>Inquiries</dt><dd>Confidential</dd></div>
+          </dl>
+          <div class="waves" aria-hidden="true">
+            <span style="height:40%"></span><span style="height:70%"></span><span style="height:48%"></span><span style="height:100%"></span><span style="height:62%"></span><span style="height:84%"></span><span style="height:46%"></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-label="Market figures">
+      <div class="wrap stats">
+        <div class="stat"><strong>30%+</strong><span>CAGR</span><em>Generative AI music, recent public estimates</em></div>
+        <div class="stat"><strong>$20B+</strong><span>Voice AI</span><em>Market size cited toward 2031</em></div>
+        <div class="stat"><strong>27%+</strong><span>AI music CAGR</span><em>Trajectory discussed past $60B by the mid-2030s</em></div>
+      </div>
+      <p class="wrap source">Public estimates from Grand View Research, Market.us, MarketsandMarkets, and Straits Research. Figures move. They are context, not a forecast we stand behind.</p>
+    </section>
+
+    <section class="section" id="name">
+      <div class="wrap">
+        <p class="kicker">The name</p>
+        <h2>Voice. Verse. Hub.</h2>
+        <p class="intro">Three ordinary words that, together, name the category. That is the whole investment thesis in a line.</p>
+        <div class="pillars">
+          <article class="card">
+            <h3 class="word">Voice</h3>
+            <p><strong>The emotional core.</strong> Speech, timbre, and performance — the part of a recording an audience feels first. Voice AI now lets one artist direct it, not just capture it.</p>
+          </article>
+          <article class="card">
+            <h3 class="word">Verse</h3>
+            <p><strong>Structure, made directable.</strong> Lyric, melody, and score. What used to take a room of writers and players, shaped with models the artist still owns.</p>
+          </article>
+          <article class="card">
+            <h3 class="word">Hub</h3>
+            <p><strong>Where the work collects.</strong> Tools, catalogs, collaborators, and buyers need a center. Hub is the destination — a platform name, not a feature name.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap split wins-layout section">
+        <div>
+          <p class="kicker">Why it wins</p>
+          <h2>A name that does not need a translation.</h2>
+        </div>
+        <ol class="wins">
+          <li class="win"><p class="num">01</p><h3>Says what it is</h3><p>Voice, verse, and hub are plain words. A buyer understands the category before the pitch deck.</p></li>
+          <li class="win"><p class="num">02</p><h3>Poetic, still ownable</h3><p>It scans as a brand, not a keyword string. Easy to say on a stage, a podcast, or a term sheet.</p></li>
+          <li class="win"><p class="num">03</p><h3>Spells itself</h3><p>No invented spelling, no hyphen, no double letter trap. Fourteen letters, one obvious .com.</p></li>
+          <li class="win"><p class="num">04</p><h3>Room to grow</h3><p>Fits a product, a studio, a marketplace, a label, or a holding company without renaming.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="market">
+      <div class="wrap">
+        <p class="kicker">Market</p>
+        <h2>Positioned at the center of a multi-billion dollar buildout.</h2>
+        <div class="market-grid">
+          <article class="card plain">
+            <h3>One artist. A full score.</h3>
+            <p>AI collapsed the distance between an idea and a finished track, voiceover, or score. The artist is becoming a director of systems. The companies selling those systems still need a brand people can remember after the demo.</p>
+          </article>
+          <article class="card plain">
+            <h3>The naming window is short.</h3>
+            <p>Voice models, music models, and creator tools are funding in the same quarter. Category names that are still available as a clean .com will not stay that way. voiceversehub.com is one of them.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="uses">
+      <div class="wrap section">
+        <p class="kicker">Built for builders</p>
+        <h2>Endless applications. One brand.</h2>
+        <div class="uses">
+          <article class="card"><h3>AI music platform</h3><p>Generation, stems, and release — one name over the whole stack.</p></article>
+          <article class="card"><h3>Voice AI hub</h3><p>Synthesis, cloning controls, and voice direction for studios.</p></article>
+          <article class="card"><h3>Media and entertainment</h3><p>Scores, ads, trailers, and localized dialogue under one brand.</p></article>
+          <article class="card"><h3>Creator community</h3><p>A home for artists who direct models instead of hiring a crew.</p></article>
+          <article class="card"><h3>Marketplace and licensing</h3><p>Voices, verses, and catalogs with clear commercial terms.</p></article>
+          <article class="card"><h3>Education and tools</h3><p>Curriculum and software for the new production desk.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="case">
+      <div class="wrap">
+        <p class="kicker">The investment case</p>
+        <h2>Why this .com can carry a premium.</h2>
+        <div class="case">
+          <article><h3>Instant brand equity</h3><p>An exact-match .com arrives with the category already in the name. You skip the years spent teaching people how to spell you.</p></article>
+          <article><h3>Exact-match advantage</h3><p>Search, spoken referral, and the browser bar all point at the same string. That is rare in a crowded AI naming field.</p></article>
+          <article><h3>Built for more than one product</h3><p>Music, voice, media, community, licensing, education. The name does not lock you into a single SKU.</p></article>
+          <article><h3>Aligned with the shift</h3><p>Generative audio is moving from demo to production budget. The brand that sits in the middle of that shift is the asset.</p></article>
+        </div>
+        <p class="intro">For visionary founders, AI-native brands, strategic investors, and creative technology companies.</p>
+      </div>
+    </section>
+
+    <section class="band" id="notes">
+      <div class="wrap section">
+        <p class="kicker">Field notes</p>
+        <h2>How to read this asset.</h2>
+        <div class="notes">
+          <article>
+            <p class="kicker">Note 01</p>
+            <h3>One artist, a full production desk</h3>
+            <p>Generative audio collapsed the crew chart. A single intermedia artist can now draft score, voice, and arrangement that used to require a room. The brands that win will be hubs, not single effects.</p>
+          </article>
+          <article>
+            <p class="kicker">Note 02</p>
+            <h3>Why exact-match still prices apart</h3>
+            <p>Invented names need advertising to become language. Descriptive .coms that are still brandable — short enough to say, specific enough to own — keep a premium because the market does the explaining.</p>
+          </article>
+          <article>
+            <p class="kicker">Note 03</p>
+            <h3>What a clean transfer looks like</h3>
+            <p>Serious buyers use escrow. Funds clear, the registrar pushes the domain, both sides confirm. voiceversehub.com is positioned for that process.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="wrap" style="max-width:46rem">
+        <h2>Questions buyers ask</h2>
+        <div class="faq-list">
+          <details><summary>Is voiceversehub.com for sale? <span>+</span></summary><p>Yes. It is a premium .com offered for acquisition. Price is on request. Inquiries go to sales@desertrich.com and stay confidential.</p></details>
+          <details><summary>How do I buy this domain? <span>+</span></summary><p>Send an offer or ask for terms. A typical path is a written offer, agreement on price, then transfer through a licensed escrow service such as Escrow.com.</p></details>
+          <details><summary>Is there a buy-it-now price? <span>+</span></summary><p>Not published. Buyers who want terms, a direct purchase, or a broker-to-broker conversation can all start from the inquiry form. Serious inquiries only.</p></details>
+          <details><summary>What is included? <span>+</span></summary><p>The domain name voiceversehub.com. This site is a sales presentation, not a product, a company, or a guarantee of market outcomes.</p></details>
+          <details><summary>Who should inquire? <span>+</span></summary><p>Founders building in voice or music AI, studios, strategic investors, and representatives acting for them.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="inquire">
+      <div class="wrap section acquire">
+        <div>
+          <p class="kicker">Acquire</p>
+          <h2>Begin the conversation.</h2>
+          <p class="intro">Serious inquiries only. Your note opens in your mail app, addressed to {email}. Nothing is stored on this site.</p>
+          <ul class="trust">
+            <li>Escrow transfer available. Funds and the domain move together.</li>
+            <li>Confidential. We work with buyers and their representatives.</li>
+            <li>HTTPS, a canonical host, and one owner of the conversation.</li>
+          </ul>
+        </div>
+        <form class="panel" id="inquiry" novalidate>
+          <fieldset style="border:0;padding:0;margin:0">
+            <legend class="kicker">How should we treat this</legend>
+            <div class="intents" id="intents">
+              <button type="button" class="intent" data-intent="Make an offer" aria-pressed="true">Make an offer</button>
+              <button type="button" class="intent" data-intent="Request buy terms" aria-pressed="false">Request buy terms</button>
+              <button type="button" class="intent" data-intent="Contact the agent" aria-pressed="false">Contact the agent</button>
+            </div>
+          </fieldset>
+          <div class="fields">
+            <div><label for="name">Name</label><input id="name" name="name" autocomplete="name" required /></div>
+            <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+            <div><label for="organization">Organization</label><input id="organization" name="organization" autocomplete="organization" /></div>
+            <div><label for="offer">Offer, if you have one</label><input id="offer" name="offer" placeholder="USD, optional" /></div>
+            <div class="full"><label for="message">Note</label><textarea id="message" name="message" rows="5" required placeholder="What you are building, and how you would like to proceed."></textarea></div>
+          </div>
+          <p class="form-error" id="form-error" hidden></p>
+          <p class="form-status" id="form-status" hidden></p>
+          <div class="cta-row">
+            <button class="btn btn-primary" type="submit">Send inquiry</button>
+            <a class="btn" href={mailto}>Open email</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <h2>Own the voice of the future.</h2>
+      <p class="intro">voiceversehub.com is ready for the builder who will define the next chapter of AI-powered creation. Premium positioning. Serious buyers and their representatives.</p>
+      <div class="foot-links">
+        <a href={mailto}>{email}</a>
+        <a href="#name">The name</a>
+        <a href="#market">Market</a>
+        <a href="#uses">Uses</a>
+        <a href="#inquire">Inquire</a>
+      </div>
+      <p class="fine">This website is for demonstration and informational purposes only. It does not constitute an offer of services, a commitment to deploy, or a guarantee of outcomes. All statistics, projections, and references to specific technologies are based on publicly available information and are subject to change. Domain acquisition is subject to agreement and a completed transfer.</p>
+      <p class="fine">© {new Date().getFullYear()} voiceversehub.com</p>
+    </div>
+  </footer>
+
+  <div class="dialog-back hidden" id="exit" role="presentation">
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="exit-title">
+      <div class="plate-top">
+        <h2 id="exit-title">Take the acquisition brief.</h2>
+        <button class="icon-btn" id="exit-close" type="button" aria-label="Close">×</button>
+      </div>
+      <p class="intro">One email. We reply with availability, transfer path, and how offers are handled. No list, no drip.</p>
+      <form id="exit-form">
+        <label for="exit-email">Email</label>
+        <input id="exit-email" type="email" required />
+        <p class="form-status" id="exit-note" hidden></p>
+        <button class="btn btn-primary" type="submit" style="width:100%;margin-top:1rem">Email the brief</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const email = "sales@desertrich.com";
+    const root = document.documentElement;
+    const track = (event: string, detail?: string) => {
+      const w = window as Window & { dataLayer?: Record<string, string>[] };
+      w.dataLayer = w.dataLayer || [];
+      w.dataLayer.push({ event, ...(detail ? { detail } : {}) });
+    };
+    const mail = (fields: Record<string, string>) => {
+      const subject = `Inquiry for voiceversehub.com — ${fields.intent}`;
+      const body = [`Name: ${fields.name}`, `Email: ${fields.email}`, `Organization: ${fields.organization || "—"}`, `Intent: ${fields.intent}`, `Offer: ${fields.offer || "—"}`, "", fields.message].join("\n");
+      return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    };
+
+    document.getElementById("theme")?.addEventListener("click", () => {
+      const light = root.classList.toggle("light");
+      localStorage.setItem("vv-theme", light ? "light" : "dark");
+      track("theme", light ? "light" : "dark");
+    });
+
+    const menu = document.getElementById("menu");
+    const mobile = document.getElementById("mobile-nav");
+    menu?.addEventListener("click", () => {
+      const open = mobile?.hasAttribute("hidden");
+      if (open) mobile?.removeAttribute("hidden");
+      else mobile?.setAttribute("hidden", "");
+      mobile?.classList.toggle("open", Boolean(open));
+      menu.setAttribute("aria-expanded", open ? "true" : "false");
+      menu.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    });
+    mobile?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+      mobile.setAttribute("hidden", "");
+      mobile.classList.remove("open");
+      menu?.setAttribute("aria-expanded", "false");
+    }));
+
+    let intent = "Make an offer";
+    const setIntent = (next: string) => {
+      intent = next;
+      document.querySelectorAll<HTMLButtonElement>(".intent").forEach((button) => {
+        button.setAttribute("aria-pressed", button.dataset.intent === next ? "true" : "false");
+      });
+    };
+    document.querySelectorAll<HTMLButtonElement>(".intent").forEach((button) => {
+      button.addEventListener("click", () => setIntent(button.dataset.intent || "Make an offer"));
+    });
+    document.querySelectorAll<HTMLAnchorElement>("[data-intent]").forEach((link) => {
+      link.addEventListener("click", () => {
+        setIntent(link.dataset.intent || "Make an offer");
+        track("cta", link.dataset.intent);
+      });
+    });
+
+    const form = document.getElementById("inquiry") as HTMLFormElement | null;
+    form?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const name = String(data.get("name") || "").trim();
+      const from = String(data.get("email") || "").trim();
+      const message = String(data.get("message") || "").trim();
+      const error = document.getElementById("form-error");
+      const status = document.getElementById("form-status");
+      const fail = (text: string) => {
+        if (!error) return;
+        error.hidden = false;
+        error.textContent = text;
+      };
+      if (name.length < 2) return fail("Add your name.");
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(from)) return fail("Use a valid email so the reply can reach you.");
+      if (message.length < 8) return fail("Add a short note about the acquisition.");
+      if (error) error.hidden = true;
+      track("inquiry_submit", intent);
+      location.href = mail({
+        name,
+        email: from,
+        organization: String(data.get("organization") || "").trim(),
+        intent,
+        offer: String(data.get("offer") || "").trim(),
+        message,
+      });
+      if (status) {
+        status.hidden = false;
+        status.textContent = "Your mail app should be open with the inquiry. If it did not, write sales@desertrich.com directly.";
+      }
+    });
+
+    const exit = document.getElementById("exit");
+    document.addEventListener("mouseout", (event) => {
+      if (event.clientY > 12) return;
+      if (sessionStorage.getItem("vv-exit")) return;
+      sessionStorage.setItem("vv-exit", "1");
+      exit?.classList.remove("hidden");
+      track("exit_intent");
+    });
+    document.getElementById("exit-close")?.addEventListener("click", () => exit?.classList.add("hidden"));
+    document.getElementById("exit-form")?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const value = (document.getElementById("exit-email") as HTMLInputElement).value.trim();
+      const note = document.getElementById("exit-note");
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        if (note) { note.hidden = false; note.textContent = "Enter a valid email."; }
+        return;
+      }
+      track("exit_email");
+      location.href = mail({
+        name: "Exit inquiry",
+        email: value,
+        organization: "",
+        intent: "Request the acquisition brief",
+        offer: "",
+        message: `Please send the acquisition brief for voiceversehub.com. Reply to ${value}.`,
+      });
+      if (note) { note.hidden = false; note.textContent = "Opening your mail app with the brief request."; }
+    });
+  </script>
 </BaseLayout>
